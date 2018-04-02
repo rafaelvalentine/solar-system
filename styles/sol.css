@@ -1,0 +1,345 @@
+body {
+    background: #000;
+}
+
+.solar-system {
+    position: relative;
+    width: 1500px;
+    height: 1500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+/* some positioning rules that are common for all elements */
+
+.orbit {
+    border: 1px dashed #666;
+}
+
+#sun,
+.orbit,
+.orbit+div,
+.orbit+div>div {
+    position: absolute;
+}
+
+#sun,
+.orbit,
+.orbit+div {
+    top: 50%;
+    left: 50%;
+}
+
+.orbit+div>div {
+    top: 0;
+    left: 50%;
+}
+
+.orbit,
+.orbit+div,
+#earth,
+#venus,
+#jupiter,
+#mercury,
+#saturn,
+#uranus,
+#neptune,
+#mars {
+    border-radius: 50%;
+}
+
+#sun {
+    width: 200px;
+    height: 200px;
+    background-color: #fae20a;
+    border-radius: 50%;
+    border-top: -100px;
+    border-left: -100px;
+    border: 5px solid rgb(197, 128, 1);
+    box-shadow: 0 0 84px orange;
+    -webkit-box-shadow: 0 0 84px orange;
+}
+
+#earth {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    box-shadow: 0 0 24px #3a4385;
+    -webkit-box-shadow: 0 0 24px #3a4385;
+}
+
+.earth-orbit,
+.earth-spin {
+    height: 500px;
+    width: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+}
+
+#moon {
+    width: 5px;
+    height: 5px;
+    margin-top: -2px;
+    margin-left: -2px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 24px #3a4385;
+    -webkit-box-shadow: 0 0 24px #3a4385;
+}
+
+.moon-orbit,
+.moon-spin {
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-color: #447;
+}
+
+#venus {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 17.5px;
+    height: 17.5px;
+    margin-top: -10px;
+    margin-left: -10px;
+    box-shadow: 0 0 24px #db2f04;
+    -webkit-box-shadow: 0 0 24px #db2f04;
+}
+
+.venus-orbit,
+.venus-spin {
+    height: 400px;
+    width: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+}
+
+#mercury {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 7.6px;
+    height: 7.6px;
+    margin-top: -4px;
+    margin-left: -4px;
+    box-shadow: 0 0 34px #3a4385;
+    -webkit-box-shadow: 0 0 34px #3a4385;
+}
+
+.mercury-orbit,
+.mercury-spin {
+    height: 300px;
+    width: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+#mars {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10.6px;
+    height: 10.6px;
+    margin-top: -5px;
+    margin-left: -5px;
+    box-shadow: 0 0 34px #d8450a;
+    -webkit-box-shadow: 0 0 34px #d8450a;
+}
+
+.mars-orbit,
+.mars-spin {
+    height: 600px;
+    width: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+}
+
+#jupiter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 65px;
+    height: 65px;
+    margin-top: -30px;
+    margin-left: -30px;
+    box-shadow: 0 0 10px #6b6d7a;
+    -webkit-box-shadow: 0 0 10px #6b6d7a;
+}
+
+.jupiter-orbit,
+.jupiter-spin {
+    height: 750px;
+    width: 750px;
+    margin-top: -370px;
+    margin-left: -370px
+}
+
+#saturn {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 70.6px;
+    height: 70.6px;
+    margin-top: -35px;
+    margin-left: -35px;
+    /* box-shadow: 0 0 10px #6b6d7a;
+                    -webkit-box-shadow: 0 0 10px #6b6d7a; */
+}
+
+.saturn-orbit,
+.saturn-spin {
+    height: 950px;
+    width: 950px;
+    margin-top: -470px;
+    margin-left: -470px;
+}
+
+#uranus {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin-top: -15px;
+    margin-left: -20px;
+    box-shadow: 0 0 10px #394fdf;
+    -webkit-box-shadow: 0 0 10px #394fdf;
+}
+
+.uranus-orbit,
+.uranus-spin {
+    height: 1080px;
+    width: 1080px;
+    margin-top: -530px;
+    margin-left: -530px;
+}
+
+#neptune {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -20px;
+    box-shadow: 0 0 10px #7091d4;
+    -webkit-box-shadow: 0 0 10px #7091d4;
+}
+
+.neptune-orbit,
+.neptune-spin {
+    height: 1200px;
+    width: 1200px;
+    margin-top: -590px;
+    margin-left: -590px;
+}
+
+
+/* the animation for the planets */
+
+@-webkit-keyframes spin-right {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-right {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.earth-spin {
+    animation: spin-right 36.5s linear infinite;
+    -webkit-animation: spin-right 36.5s linear infinite;
+}
+
+.moon-spin {
+    animation: spin-right 3s linear infinite;
+    -webkit-animation: spin-right 3s linear infinite;
+}
+
+.mercury-spin {
+    animation: spin-right 8.7s linear infinite;
+    -webkit-animation: spin-right 8.7s linear infinite;
+}
+
+.venus-spin {
+    animation: spin-right 22.4s linear infinite;
+    -webkit-animation: spin-right 22.4s linear infinite;
+}
+
+.mars-spin {
+    animation: spin-right 68.6s linear infinite;
+    -webkit-animation: spin-right 68.6s linear infinite;
+}
+
+.jupiter-spin {
+    animation: spin-right 434.5s linear infinite;
+    -webkit-animation: spin-right 434.5s linear infinite;
+}
+
+.saturn-spin {
+    animation: spin-right 1073.5s linear infinite;
+    -webkit-animation: spin-right 1073.5s linear infinite;
+}
+
+.uranus-spin {
+    animation: spin-right 3041.7s linear infinite;
+    -webkit-animation: spin-right 3041.7s linear infinite;
+}
+
+.neptune-spin {
+    animation: spin-right 6083.3s linear infinite;
+    -webkit-animation: spin-right 6083.3s linear infinite;
+}
+
+
+/* the legend */
+
+.legend-table {
+    color: white;
+    padding: 10px;
+    width: 400px;
+    height: 900px;
+}
+
+.legend-head {
+    background: #fae20a;
+    padding: 10px;
+}
+
+.legend {
+    position: absolute;
+    top: 1500px;
+    left: 0;
+    box-sizing: border-box;
+    width: 400px;
+    padding: 10px;
+}
+
+.legend-box {
+    width: 100%;
+    padding: 0 5px 5px 5px;
+}
+
+.legend-planet img {
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 auto;
+    border-radius: 50%;
+}
+
+.legend-row {
+    background-color: #394fdf;
+    height: 100px;
+}
